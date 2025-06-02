@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>무한의 시작</title>
+  <link rel="stylesheet" href="common.css">
+
+  <style>
+    /* 소개 문단 */
+    p{font-size:20px;font-weight:bold;color:#B97A57;}
+
+    /* 타임라인 */
+    .timeline{margin:1rem 0;padding:0;list-style:none;}
+    .timeline li{font-weight:bold;font-size:.9rem;color:#B97A57;line-height:1.6em;}
+    .timeline li span{font-size:1rem;font-weight:bold;color:#312520;margin-right:.6rem;}
+  </style>
+</head>
+
+<body>
+<div class="container">
+
+  <!-- ── HEADER ───────────────────────────────────── -->
+  <header>
+    <div class="left-box">
+      <a href="index.html"><img id="logo" src="logo.png"></a>
+      <img id="moto" src="moto.png" style="margin-left:20px;">
+    </div>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="nav-hamburger">☰</label>
+
+    <nav>
+      <ul id="top_menu">
+        <li><a href="page1.html">무한의 시작</a></li>
+        <li><a href="page2.html">MENU</a></li>
+        <li><a href="page3.html">계절 속으로</a></li>
+        <li><a href="page4.html">감성 PLAYLIST</a></li>
+        <li><a href="page5.html">함께하기</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ── SECTION : 무한의 시작 ─────────────────────── -->
+  <section class="section">
+    <h2>무한의 시작</h2>
+
+    <div style="display:flex;flex-wrap:wrap;gap:2rem;">
+      <!-- 소개 + 타임라인 -->
+      <div style="flex:1 1 300px;background:#f3e6de;padding:1.5rem;border-radius:10px;color:#4d3a33;">
+        <p>
+          INFINITE cafe는 2023년 3월에 개업한 카페입니다.<br><br>
+          계절마다 달라지는 디저트는 지역 농가에서 들여온 제철 재료로 정성껏 만듭니다.<br><br>
+          감성을 깨우는 플레이리스트는 손님들의 추천 곡으로 꾸며져 카페 안이 작은 음악 라운지가 됩니다.<br><br>
+          마음 편히 머물다 갈 수 있도록 모든 좌석에 전원과 무료 Wi-Fi를 갖추었습니다.<br><br>
+          “한 잔의 커피로 무한한 가능성을 불어넣는 공간이 되겠습니다”
+        </p>
+
+        <ul class="timeline">
+          <li><span>2023.03</span>INFINITE cafe 개업</li>
+          <li><span>2023.07</span>여름 시즌 메뉴 ‘망고 프라페’ 출시</li>
+          <li><span>2024.02</span>누적 10,000 잔 돌파</li>
+        </ul>
+      </div>
+
+      <!-- 내부 사진 -->
+      <img src="started.jpg" style="flex:1 1 300px;border-radius:10px;">
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────── -->
+  <footer class="site-footer">
+    <article id="address">
+      <ul id="footer_menu">
+        <li>개인정보 취급방침 | 이용안내 | 이메일 무단수집 거부</li>
+        <li>알레르기 정보 안내 | 원두 산지 조회 | 단체 예약 문의 | 영양 성분표 다운로드 | 분실물 센터</li>
+      </ul>
+
+      <ul id="company_info">
+        <li><strong>INFINITE cafe</strong></li>
+        <li>대표이사 : 김예은</li>
+        <li>주소 : 서울시 OO구 OO동 12-3</li>
+        <li>전화 : (02)1234-5678 &nbsp; FAX : (02)123-4567</li>
+        <li id="copyright">ⓒ 2025 Infinite Coffee Lab. All rights reserved.</li>
+      </ul>
+    </article>
+
+    <article id="link">
+      <h3>문의&nbsp;1234-5678</h3>
+
+      <select onchange="if(this.value) window.open(this.value);">
+        <option value="">--바로가기--</option>
+        <option value="https://www.naver.com">네이버</option>
+        <option value="https://www.daum.net">다음</option>
+        <option value="https://www.google.com">구글</option>
+      </select>
+
+      <div id="icons">
+        <a href="#"><img src="f.png"></a>
+        <a href="#"><img src="i.png"></a>
+        <a href="#"><img src="k.png"></a>
+      </div>
+    </article>
+
+    <div class="clear"></div>
+  </footer>
+
+</div>
+</body>
+</html>

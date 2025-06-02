@@ -1,0 +1,122 @@
+/* ── 0. Reset & 기본 글꼴 ───────────────────────────── */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font:12px "맑은 고딕","돋움",sans-serif;background:#B97A57;color:#fff;}
+a{color:inherit;text-decoration:none;}
+ul{list-style:none;}
+
+/* ── 1. 레이아웃 컨테이너 ──────────────────────────── */
+.container{max-width:980px;margin:0 auto;padding:0 1rem;}
+
+/* ── 2. HEADER ─────────────────────────────────────── */
+header{overflow:hidden;padding:1rem 0;}
+.left-box{float:left;}
+
+.nav-toggle{display:none;}
+.nav-hamburger{float:right;font-size:1.6rem;cursor:pointer;margin-left:1rem;line-height:40px;}
+
+header nav{float:right;}
+header nav ul{display:none;}
+header nav ul li{display:block;}
+
+@media(min-width:768px){
+  .nav-hamburger{display:none;}
+  header nav{margin-top:35px;}
+  header nav ul{display:block;}
+  header nav ul li{float:left;margin-left:1.5rem;}
+  header nav ul li:first-child{margin-left:0;}
+  header nav ul::after{content:"";display:block;clear:both;}
+}
+
+/* 모바일: 햄버거 체크 시 메뉴 펼침 */
+.nav-toggle:checked + .nav-hamburger + nav ul{display:block;}
+
+/* ── 3. TOP 배너 ───────────────────────────────────── */
+#banner{margin-left:40px;}
+#banner ul{display:block;white-space:nowrap;overflow-x:auto;padding:.5rem 0;}
+#banner li{display:inline-block;margin-right:2rem;}
+#banner img{height:90px;cursor:pointer;}
+
+/* ── 4. SECTION 공통 ───────────────────────────────── */
+.section{min-height:60vh;padding:2rem;background:#fff;color:#312520;}
+.section h2{margin-bottom:1.2rem;color:#B97A57;}
+
+/* ── 5. MENU 카드 3×2 ──────────────────────────────── */
+.card{display:inline-block;width:30%;min-width:260px;margin:1%;vertical-align:top;}
+.card img{width:100%;border-radius:8px;}
+.card h3{margin:.6rem 0 .2rem;font-size:1rem;}
+.card p{font-size:.9rem;color:#55433d;}
+
+/* ── 6. 계절 갤러리 2×2 ────────────────────────────── */
+.gallery{font-size:0;}
+.gallery figure{display:inline-block;width:48%;margin:1%;vertical-align:top;}
+.gallery img{width:100%;border-radius:8px;}
+.gallery figcaption{display:block;margin-top:.5rem;font-size:14px;color:#312520;}
+
+/* ── 7. ITEM 카드(이미지+설명) ────────────────────── */
+.item{display:inline-block;width:48%;margin:1%;vertical-align:top;background:#fff8f2;padding:.8rem;border-radius:8px;box-shadow:0 0 5px rgba(0,0,0,.08);font-size:14px;}
+.item img{display:inline-block;width:42%;max-width:120px;border-radius:6px;vertical-align:top;margin-right:6%;}
+.item .desc{display:inline-block;width:50%;color:#312520;}
+.item .desc strong{color:#B97A57;}
+
+@media(max-width:600px){
+  .item img,.item .desc{display:block;width:100%;margin:0;}
+  .item img{max-width:100%;margin-bottom:.6rem;}
+}
+
+/* ── 8. 플레이리스트 ──────────────────────────────── */
+.track{margin-bottom:1rem;padding:.8rem 1rem;background:#fff8f2;border-radius:8px;box-shadow:0 0 4px rgba(0,0,0,.06);}
+.track h3{display:inline-block;width:120px;color:#B97A57;vertical-align:middle;}
+.track audio{display:inline-block;width:calc(100% - 140px);vertical-align:middle;height:32px;margin-left:.5rem;}
+@media(max-width:480px){
+  .track h3,.track audio{display:block;width:100%;margin:0 0 .4rem 0;}
+}
+
+/* ── 9. 방명록 & Q&A ──────────────────────────────── */
+.guest-wrap{font-size:0;}
+.guest-form,.qna-form{display:inline-block;width:48%;margin:1%;vertical-align:top;font-size:14px;}
+.guest-form textarea,.qna-form textarea{width:100%;min-height:160px;padding:.8rem;border:1px solid #c7a893;border-radius:8px;resize:vertical;}
+.guest-form .save,.qna-form .save{float:right;margin-top:.6rem;padding:.6rem 1.2rem;border:none;border-radius:6px;background:#B97A57;color:#fff;cursor:pointer;}
+@media(max-width:600px){
+  .guest-form,.qna-form{display:block;width:100%;margin:0 0 1.2rem 0;}
+  .guest-form .save,.qna-form .save{float:none;display:block;width:100%;}
+}
+
+/* ── 10. INFO 박스(고객센터·공지·FAQ) ─────────────── */
+.info-wrap{font-size:0;margin:2rem 0;}
+.info-box{display:inline-block;width:31%;margin:0 1% 1.5rem;background:#fff;padding:1rem;border-radius:8px;box-shadow:0 0 4px rgba(0,0,0,.06);vertical-align:top;font-size:14px;}
+.notice-list{margin-top:.8rem;padding-left:0;}
+.notice-list li{margin:.3rem 0;}
+.notice-list .subject{display:inline-block;width:72%;}
+.notice-list .date{display:inline-block;width:26%;text-align:right;color:#777;font-size:.85em;}
+#notice{color:#312520;}     /* 공지사항 글자색 */
+
+@media(max-width:600px){
+  .info-box{display:block;width:100%;margin:0 0 1.2rem 0;}
+}
+
+/* ── info-box 안 이미지를 반응형으로 ───────────────── */
+.info-box img{
+  max-width:100%;   /* 부모(박스) 너비를 넘지 않음 */
+  height:auto;      /* 비율 유지 */
+  display:block;    /* 인라인→블록: 좌우 여백(whitespace) 제거 */
+}
+
+/* ── 11. FOOTER ───────────────────────────────────── */
+.site-footer{background:#312520;color:#fff;padding:1.5rem 1rem;font-size:.9rem;}
+.site-footer::after{content:"";display:block;clear:both;}
+
+#address{float:left;width:65%;}
+#footer_menu li,#company_info li{margin:.2rem 0;line-height:1.4em;}
+#footer_menu li{font-weight:bold;color:#ffc;}
+#company_info strong{color:#ffd07e;}
+
+#link{float:right;width:30%;text-align:right;}
+#link h3{margin:0 0 .6rem;font-size:1.1rem;color:#ffd07e;}
+#link select{width:100%;max-width:200px;padding:.4rem;border:none;border-radius:4px;margin-bottom:.8rem;}
+#icons img{width:28px;margin-left:.4rem;vertical-align:middle;}
+#icons a:hover img{opacity:.8;}
+
+@media(max-width:600px){
+  #address,#link{float:none;width:100%;text-align:left;}
+  #link{margin-top:1.2rem;}
+}
